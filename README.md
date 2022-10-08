@@ -1,2 +1,2 @@
-# SCSS Watch Code
-sass --watch assets/css/style.scss assets/css/style.css
+# TAILWIND CSS CLI
+npx tailwindcss -i ./assets/css/style.scss -o ./assets/css/style.css --watch   
