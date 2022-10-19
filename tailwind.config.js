@@ -13,6 +13,10 @@ module.exports = {
           supText: '#7B7B7D'
         },
         primary: '#AFB42B'
+      },
+      screens: {
+        'lgx': {'max': '992px'},
+        'mdx': {'max': '768px'}
       }
     },
   },

@@ -7,20 +7,23 @@ body {
   @apply bg-black text-light-text;
 }
 .wrapper {
-  @apply border-[10px] border-black bg-light-bg rounded-[20px] relative h-screen overflow-auto;
+  @apply md:border-[10px] border-black bg-light-bg md:rounded-[20px] relative h-screen overflow-auto;
 }
 .page-content {
-  margin: 0 40px;
+  @apply px-[40px]
 }
 .section-space {
-  @apply px-[40px];
+  @apply lg:px-[40px];
 }
 .fo-container {
   @apply w-full px-[20px] mx-auto;
 }
+.fo-button,
+.fo-button-rounded {
+  @apply h-10 bg-primary text-light-white rounded-full flex items-center justify-center min-w-[40px];
+}
 .fo-button {
-  height: 40px;
-  @apply h-10 px-6 py-3 bg-primary text-light-white text-xs rounded-full font-semibold tracking-[2px] flex items-center justify-center;
+  @apply px-6 py-3 text-xs font-semibold tracking-[2px];
 }
 .fo-button i {
   margin-left: 4px;
@@ -49,7 +52,7 @@ body {
 /* HEADER */
 header {
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
-  @apply bg-light-bg sticky w-full rounded-t-[20px] top-0 left-0 z-[99];
+  @apply bg-light-bg sticky w-full md:rounded-t-[20px] rounded-b-[20px] top-0 left-0 z-[99];
 }
 header:after {
   width: calc(100% - 60px);
@@ -61,29 +64,45 @@ header .name-title {
 header .name-title span {
   @apply text-primary;
 }
-header nav {
-}
 header nav ul {
-  @apply mr-5;
+  @apply lg:mr-5;
 }
 header nav ul li {
   @apply relative;
 }
 header nav ul li a {
-  @apply text-light-text truncate px-5 uppercase text-xs tracking-[2px] font-semibold h-[80px] flex items-center;
+  @apply text-light-text truncate px-5 uppercase text-xs tracking-[2px] font-semibold lg:h-[80px] flex items-center lgx:justify-center lgx:mb-4;
 }
 header nav ul li:before {
   @apply absolute content-[''] bottom-0 left-0 h-1 bg-primary transition-transform duration-300 w-full scale-x-0;
 }
-header nav ul li:hover:before{
-  @apply scale-x-100
+header nav ul li:hover:before {
+  @apply scale-x-100;
 }
-header nav ul li.active:before,
-header nav ul li:active:before {
+header .menu .navigation-container{
+  @apply flex flex-wrap items-center
 }
+header .header-menu{
+  @apply lg:hidden flex lgx:justify-end h-[80px] items-center
+}
+@media (max-width: 992px) {
+  header .menu .navigation-container{
+    @apply w-full h-full flex-col lg:justify-center justify-between py-5 z-10 
+  }
+  header .menu{
+    @apply flex flex-col justify-center items-center w-screen h-screen absolute top-0 left-0 bg-light-bg transform translate-x-full transition-transform duration-300
+  }
+}
+
 /* BANNER */
 section.banner {
-  @apply relative h-[500px] flex items-center;
+  @apply relative lg:h-[500px] h-[50vh] flex items-center;
+}
+section.banner.breadcrumbs {
+  @apply lg:h-[300px] h-auto relative mdx:pb-24 mdx:pt-28
+}
+section.banner.breadcrumbs::after {
+  @apply h-full w-full bg-black content-[''] absolute top-0 left-0 opacity-20 rounded-b-[20px]
 }
 
 section.banner .overlay-bg {
@@ -94,11 +113,30 @@ section.banner .label {
   text-shadow: 0 1px 10px rgb(0 0 0 / 30%);
   @apply text-light-white font-[700];
 }
+section.banner .banner-mini-title,
+section.banner .banner-title {
+  @apply tracking-[2px];
+}
 section.banner .banner-mini-title {
-  @apply text-xs tracking-[2px] uppercase;
+  @apply text-xs uppercase mb-3;
 }
 section.banner .banner-title {
-  @apply text-[64px] tracking-[2px] tracking-[0];
+  @apply text-[64px] leading-tight;
+}
+section.banner.breadcrumbs .banner-title {
+  @apply md:text-[45px] text-[35px] leading-tight mb-4;
+}
+section.banner.breadcrumbs ul{
+  @apply flex justify-center gap-1 items-center flex-wrap
+}
+section.banner.breadcrumbs ul li {
+  @apply text-sm text-white flex 
+}
+@media (max-width: 992px) {
+  section.banner .banner-mini-title,
+  section.banner .banner-title {
+    @apply text-center;
+  }
 }
 
 /* SERVICES */
@@ -141,8 +179,71 @@ section.blog .blog-item .card-style h4 {
 }
 
 footer .footer-content {
-  @apply flex justify-between text-xs text-light-supText tracking-widest font-semibold;
+  @apply flex justify-between text-xs text-light-supText tracking-widest font-semibold lgx:justify-center;
 }
+/* PROJECTS */
+section.projects .project-item {
+  @apply rounded-[10px] overflow-hidden relative;
+}
+section.projects .project-item .thumbnail img {
+  @apply absolute top-0 left-0 w-full h-full object-cover;
+}
+section.projects .project-item .thumbnail {
+  @apply relative after:content-[''] after:pb-[100%] after:w-full after:block;
+}
+section.projects .project-item .info {
+  @apply bg-white px-[40px] py-[20px] absolute bottom-0 w-full text-base flex justify-between items-center transform transition-transform duration-300 lg:translate-y-full;
+}
+section.projects .project-item .info .title {
+  @apply font-[700];
+}
+
+section.projects .project-item:hover .info {
+  @apply translate-y-0;
+}
+/* BLOG CONTENT */
+section.blog-content h1, section.blog-content h2, section.blog-content h3, section.blog-content h4, section.blog-content h5, section.blog-content h6{
+  @apply mb-[20px]
+}
+section.blog-content h1{
+  @apply text-3xl font-[700]
+}
+section.blog-content h2{
+  @apply text-2xl font-[700]
+}
+section.blog-content h3{
+  @apply text-xl font-[700]
+}
+section.blog-content h4{
+  @apply text-lg font-[700]
+}
+section.blog-content h5{
+  @apply text-base font-[700]
+}
+section.blog-content h6{
+  @apply text-sm font-[700]
+}
+section.blog-content p, section.blog-content ul{
+  @apply mb-[30px]
+}
+section.blog-content ul li{
+  @apply mb-[15px] pl-[25px] relative
+}
+section.blog-content img{
+  @apply text-sm font-[700] rounded-[20px]
+}
+section.blog-content ul li:before {
+  @apply content-[''] absolute top-2/4 left-0 h-2.5 w-2.5 transform -translate-y-2/4;
+  border: solid 3px #AFB42B;
+  border-radius: 50%;
+}
+.blog-sidebar ul li{
+  @apply pl-[20px]
+}
+.blog-sidebar ul li:after{
+  @apply pl-[20px]
+}
+
 /* COMPONENTS */
 
 section .section-title {
@@ -164,6 +265,9 @@ section .section-title span:after {
 .card-style {
   box-shadow: 0 2px 4px -2px rgb(0 0 0 / 15%);
   @apply bg-light-white p-10 rounded-[10px] relative;
+}
+.blog-content .card-style{
+  @apply mdx:px-7 mdx:py-7
 }
 .card-style blockquote:before {
   margin: 0;
@@ -208,13 +312,13 @@ ul.card-data li:last-child:after {
 }
 
 .main-information-card {
-  @apply h-[calc(100%+400px)] transform translate-y-[-400px] relative;
+  @apply lg:h-[calc(100%+400px)] h-full transform lg:translate-y-[-430px] lgx:mt-[-100px] relative lgx:mb-10;
 }
 .main-information-card .info-card {
-  @apply sticky top-[470px] items-center flex flex-col;
+  @apply lg:sticky lg:top-[490px] items-center flex flex-col;
 }
 .main-information-card .info-card:before {
-  @apply content-[''] absolute h-2 w-[calc(100%-60px)] bg-light-white rounded-t-[5px] opacity-30 left-[30px] -top-2
+  @apply content-[''] absolute h-2 w-[calc(100%-60px)] bg-light-white rounded-t-[5px] opacity-30 left-[30px] -top-2;
 }
 .main-information-card .info-card .avatar {
   @apply w-[110px] h-[110px] rounded-full overflow-hidden border border-[3px] border-light-white;
@@ -225,26 +329,26 @@ ul.card-data li:last-child:after {
   @apply w-full h-full object-cover;
 }
 .main-information-card .info-card .full-name {
-  @apply text-lg font-[700] mt-4
+  @apply text-lg font-[700] mt-4;
 }
 .main-information-card .info-card .title {
-  @apply text-xs font-[600] tracking-[2px] uppercase mt-2
+  @apply text-xs font-[600] tracking-[2px] uppercase mt-2;
 }
 .main-information-card .info-card ul li a {
-  @apply text-2xl flex
+  @apply text-2xl flex;
 }
 .main-information-card .info-card .other-information li {
-  @apply flex justify-between text-xs font-[700] tracking-[2px] uppercase
+  @apply flex justify-between text-xs font-[700] tracking-[2px] uppercase;
 }
-.main-information-card .info-card .other-information li .data-value{
-  @apply opacity-60
+.main-information-card .info-card .other-information li .data-value {
+  @apply opacity-60;
 }
-.icon-link{
-  @apply flex items-center gap-1
+.icon-link {
+  @apply flex items-center gap-1;
 }
-.icon-link i{
-  @apply transition-all scale-x-0 origin-left
+.icon-link i {
+  @apply transition-all scale-x-0 origin-left;
 }
-.icon-link:hover i{
-  @apply scale-x-100
+.icon-link:hover i {
+  @apply scale-x-100;
 }
