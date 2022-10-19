@@ -10,12 +10,249 @@
     <meta name="description" content="" />
     <link rel="canonical" href="https://www.sahibinden.com/" />
 
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <div class="wrapper">
+      <header class="section-space">
+        <div class="fo-container flex items-center justify-between">
+          <div class="name-title">Furkan<span>Ozyurt</span></div>
+          <div class="header-menu"><i class="ph-list-bold text-xl"></i></div>
+          <div class="menu">
+            <nav class="navigation-container">
+              <div class="w-full lg:hidden flex justify-between fo-container">
+                <div class="name-title p-2">Furkan<span>Ozyurt</span></div>
+                <div class="lg:hidden flex p-2"><i class="ph-x-bold text-[25px]"></i></div>
+              </div>
+              <div class="lg:flex lg:items-center">
+                <ul class="lg:flex">
+                  <li class="active">
+                    <a href="#">Anasayfa</a>
+                  </li>
+                  <li>
+                    <a href="#">BLOG</a>
+                  </li>
+                  <li>
+                    <a href="#">ILETISIM</a>
+                  </li>
+                </ul>
+                <button class="fo-button">
+                  CV INDIR <i class="ph-arrow-down-bold text-base"></i>
+                </button>
+              </div>
+              <div class="w-full lg:hidden flex justify-center text-xs">
+                © 2022 Tüm Hakları Saklıdır
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="section-space">
+        <section class="banner">
+          <img src="assets/images/banner.jpeg" class="overlay-bg" />
+          <div class="fo-container relative z-10">
+            <div class="flex flex-wrap -mx-4">
+              <div class="lg:w-4/12 w-full px-4"></div>
+              <div class="lg:w-8/12 w-full px-4 lg:-mt-0 -mt-8">
+                <h4 class="banner-mini-title label">Ben Furkan Özyurt,</h4>
+                <h2 class="banner-title label">
+                  Hello<br />
+                  World !
+                </h2>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="fo-container relative z-10">
+          <div class="flex flex-wrap -mx-4 mb-7 mt-10 justify-center">
+            <div class="lg:w-4/12 md:w-7/12 w-full px-4">
+              <div class="main-information-card">
+                <div class="info-card card-style sticky">
+                  <div class="avatar">
+                    <img
+                      src="https://elanta.app/nazar/trueman-demo/light/img/avatar.jpg"
+                    />
+                  </div>
+                  <h2 class="full-name">Furkan Özyurt</h2>
+                  <h5 class="title">Front-end Developer</h5>
+                  <div class="divider w-full my-7"></div>
+                  <ul class="flex gap-4">
+                    <li>
+                      <a href="#" target="_blank">
+                        <i class="ph-linkedin-logo-fill"></i>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="divider w-full my-7"></div>
+                  <div class="w-full other-information">
+                    <ul class="flex flex-col gap-4">
+                      <li>
+                        <span>YAŞ:</span>
+                        <span class="data-value age">20</span>
+                      </li>
+                      <li>
+                        <span>KONUM:</span>
+                        <span class="data-value">IZMIR</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="divider w-full my-7"></div>
+                  <button class="fo-button uppercase gap-1">
+                    ILETISIM<i class="ph-envelope text-lg"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-8/12 px-4">
+              <section class="about">
+                <h3 class="section-title">
+                  Hakkımda
+                  <span data-number="01" class="divider"></span>
+                </h3>
 
+                <div class="card-style">
+                  <blockquote class="italic">
+                    Herkese merhaba, ben Furkan Özyurt. Bu zamana kadar
+                    freelance ve tam zamanlı olarak
+                    <span class="career-year"></span> sene frontend developer
+                    olarak çalıştım. İş hayatımın ilk adımlarını HTML, CSS ,JS
+                    kullanarak tamamladım. Sonrasında React, Next.js, Vue.js
+                    projelerinde çalıştım. Aynı zamanda şu an React Native ile
+                    mobil uygulama geliştiriyorum.
+                  </blockquote>
+                </div>
+              </section>
+              <section class="services mt-7">
+                <h3 class="section-title">
+                  Yeteneklerim
+                  <span data-number="02" class="divider"></span>
+                </h3>
 
+                <div class="flex flex-wrap -mx-4 mb-7">
+                  <div class="md:w-6/12 w-full px-4 mb-4">
+                    <div class="card-style service-item h-full">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/6347/6347451.png"
+                        class="w-[50px]"
+                      />
+                      <h4>Mobil Uygulama Geliştirme</h4>
+                      <p>
+                        React Native kullanarak IOS ve Android cihazlar için
+                        uygulama geliştirebilirim.
+                      </p>
+                      <a href="#" class="icon-link"
+                        >ILETISIM <i class="ph-arrow-right-bold"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="md:w-6/12 w-full px-4 mb-4">
+                    <div class="card-style service-item h-full">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/6347/6347744.png"
+                        class="w-[50px]"
+                      />
+                      <h4>Web Programcılığı</h4>
+                      <p>
+                        React, Vue.js, Next.js, Tailwind CSS kullanarak web
+                        uygulamalarınızı ve sitelerinizi geliştirebilirim.
+                      </p>
+                      <a href="#" class="icon-link"
+                        >ILETISIM <i class="ph-arrow-right-bold"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="blog">
+                <h3 class="section-title">
+                  Son Yazılarım
+                  <span data-number="03" class="divider"></span>
+                </h3>
+
+                <div class="flex flex-wrap -mx-4 mb-7">
+                  <div class="md:w-6/12 w-full px-4 mb-4">
+                    <div class="blog-item">
+                      <a href="#" class="thumbnail">
+                        <img
+                          src="https://elanta.app/nazar/trueman-demo/light/img/blog/b1.jpg"
+                        />
+                      </a>
+                      <div class="card-style h-full">
+                        <div class="category">Next.js</div>
+                        <h4>
+                          <a href="#"
+                            >Create your own beauty blog with Trueman</a
+                          >
+                        </h4>
+                        <div class="divider mb-4"></div>
+                        <ul class="card-data">
+                          <li>14 Ağustos</li>
+                          <li>Furkan Ö.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="projects">
+                <h3 class="section-title">
+                  Projelerim
+                  <span data-number="04" class="divider"></span>
+                </h3>
+
+                <div class="flex flex-wrap -mx-4 mb-7">
+                  <div class="md:w-6/12 w-full px-4 mb-4">
+                    <div class="project-item">
+                      <a href="#" class="thumbnail">
+                        <img
+                          src="https://elanta.app/nazar/trueman-demo/light/img/portfolio/3.gif"
+                        />
+                      </a>
+                      <div class="info">
+                        <div>
+                          <h4 class="title">Project 1</h4>
+                        </div>
+                        <div>
+                          <a href="#" class="fo-button-rounded">
+                            <i class="ph-magnifying-glass-plus-bold"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="divider mb-7"></div>
+              </section>
+              <footer>
+                <div class="card-style">
+                  <div class="footer-content">
+                    <div>© 2022 Tüm Hakları Saklıdır</div>
+                    <div class="lgx:hidden">
+                      Developer:
+                      <span class="text-primary">Furkan Özyurt</span>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="assets/js/app.js"></script>
