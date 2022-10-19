@@ -126,10 +126,13 @@ section.banner .banner-title {
 section.banner.breadcrumbs .banner-title {
   @apply md:text-[45px] text-[35px] leading-tight mb-4;
 }
-section.banner.breadcrumbs ul{
-  @apply flex justify-center gap-1 items-center flex-wrap
+section.banner ul{
+  @apply flex lg:justify-start justify-center lgx:mt-2 gap-1 items-center flex-wrap
 }
-section.banner.breadcrumbs ul li {
+section.banner.breadcrumbs ul{
+  @apply justify-center
+}
+section.banner ul li {
   @apply text-sm text-white flex 
 }
 @media (max-width: 992px) {
@@ -233,15 +236,19 @@ section.blog-content img{
   @apply text-sm font-[700] rounded-[20px]
 }
 section.blog-content ul li:before {
-  @apply content-[''] absolute top-2/4 left-0 h-2.5 w-2.5 transform -translate-y-2/4;
+  @apply content-[''] absolute top-2/4 left-0 h-2.5 w-2.5 transform -translate-y-2/4 rounded-full;
   border: solid 3px #AFB42B;
-  border-radius: 50%;
 }
 .blog-sidebar ul li{
-  @apply pl-[20px]
+  @apply pl-[20px] relative text-sm mb-2
 }
 .blog-sidebar ul li:after{
-  @apply pl-[20px]
+  @apply content-[''] absolute top-2/4 left-0 h-2.5 w-2.5 transform -translate-y-2/4 rounded-full;
+  border: solid 3px #AFB42B;
+}
+/* CONTACT */
+section.contact-information{
+  @apply lg:mt-[-130px]
 }
 
 /* COMPONENTS */
@@ -351,4 +358,17 @@ ul.card-data li:last-child:after {
 }
 .icon-link:hover i {
   @apply scale-x-100;
+}
+
+.fo-input{
+  @apply mb-5 block
+}
+.fo-input:last-child{
+  @apply mb-0
+}
+.fo-input div{
+  @apply font-[700] text-sm mb-2
+}
+.fo-input input, .fo-input textarea{
+  @apply min-h-[45px] rounded-[10px] w-full bg-light-bg shadow-inner outline-none px-[20px] text-sm block py-3
 }

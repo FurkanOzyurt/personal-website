@@ -34,7 +34,9 @@
             <nav class="navigation-container">
               <div class="w-full lg:hidden flex justify-between fo-container">
                 <a href="index.html" class="name-title p-2">Furkan<span>Ozyurt</span></a>
-                <div class="lg:hidden flex p-2"><i class="ph-x-bold text-[25px]"></i></div>
+                <div class="lg:hidden flex p-2">
+                  <i class="ph-x-bold text-[25px]"></i>
+                </div>
               </div>
               <div class="lg:flex lg:items-center">
                 <ul class="lg:flex">
@@ -66,18 +68,19 @@
             <div class="flex flex-wrap -mx-4">
               <div class="lg:w-4/12 w-full px-4"></div>
               <div class="lg:w-8/12 w-full px-4 lg:-mt-0 -mt-8">
-                <h4 class="banner-mini-title label">Ben Furkan Özyurt,</h4>
-                <h2 class="banner-title label">
-                  Hello<br />
-                  World !
-                </h2>
+                <h2 class="banner-title label">İletişim</h2>
+                <ul>
+                  <li>Ana Sayfa</li>
+                  <li><i class="ph-caret-right-bold"></i></li>
+                  <li>Blog</li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
         <div class="fo-container relative z-10">
           <div class="flex flex-wrap -mx-4 mb-7 mt-10 justify-center">
-            <div class="lg:w-4/12 md:w-7/12 w-full px-4">
+            <div class="lg:w-4/12 w-full px-4">
               <div class="main-information-card">
                 <div class="info-card card-style sticky">
                   <div class="avatar">
@@ -115,127 +118,57 @@
                 </div>
               </div>
             </div>
-            <div class="lg:w-8/12 px-4">
-              <section class="about">
+            <div class="lg:w-8/12 px-4 lgx:mb-4">
+              <section class="contact-information">
+                <div class="flex flex-wrap -mx-4">
+                  <div class="px-4 md:w-6/12 w-full mb-4">
+                    <div class="card-style">
+                      <img src="/assets/images/icons/phone.svg" class="w-14" />
+                      <h4 class="mt-5 font-[700]">Telefon Numarası</h4>
+                      <a class="text-sm mt-2" href="tel:+90 552 578 5966"
+                        >+90 552 578 5966</a
+                      >
+                    </div>
+                  </div>
+                  <div class="px-4 md:w-6/12 w-full mb-4">
+                    <div class="card-style">
+                      <img src="/assets/images/icons/email.svg" class="w-14" />
+                      <h4 class="mt-5 font-[700]">E-Posta Adresi</h4>
+                      <a
+                        class="text-sm mt-2"
+                        href="mailto:furkanozyurt90@gmail.com"
+                        >furkanozyurt90@gmail.com</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="contact-form mb-4 mt-4">
                 <h3 class="section-title">
-                  Hakkımda
+                  İletişim Formu
                   <span data-number="01" class="divider"></span>
                 </h3>
-
                 <div class="card-style">
-                  <blockquote class="italic">
-                    Herkese merhaba, ben Furkan Özyurt. Bu zamana kadar
-                    freelance ve tam zamanlı olarak
-                    <span class="career-year"></span> sene frontend developer
-                    olarak çalıştım. İş hayatımın ilk adımlarını HTML, CSS ,JS
-                    kullanarak tamamladım. Sonrasında React, Next.js, Vue.js
-                    projelerinde çalıştım. Aynı zamanda şu an React Native ile
-                    mobil uygulama geliştiriyorum.
-                  </blockquote>
-                </div>
-              </section>
-              <section class="services mt-7">
-                <h3 class="section-title">
-                  Yeteneklerim
-                  <span data-number="02" class="divider"></span>
-                </h3>
-
-                <div class="flex flex-wrap -mx-4 mb-7">
-                  <div class="md:w-6/12 w-full px-4 mb-4">
-                    <div class="card-style service-item h-full">
-                      <img
-                        src="https://cdn-icons-png.flaticon.com/512/6347/6347451.png"
-                        class="w-[50px]"
-                      />
-                      <h4>Mobil Uygulama Geliştirme</h4>
-                      <p>
-                        React Native kullanarak IOS ve Android cihazlar için
-                        uygulama geliştirebilirim.
-                      </p>
-                      <a href="contact.html" class="icon-link"
-                        >ILETISIM <i class="ph-arrow-right-bold"></i
-                      ></a>
-                    </div>
-                  </div>
-                  <div class="md:w-6/12 w-full px-4 mb-4">
-                    <div class="card-style service-item h-full">
-                      <img
-                        src="https://cdn-icons-png.flaticon.com/512/6347/6347744.png"
-                        class="w-[50px]"
-                      />
-                      <h4>Web Programcılığı</h4>
-                      <p>
-                        React, Vue.js, Next.js, Tailwind CSS kullanarak web
-                        uygulamalarınızı ve sitelerinizi geliştirebilirim.
-                      </p>
-                      <a href="contact.html" class="icon-link"
-                        >ILETISIM <i class="ph-arrow-right-bold"></i
-                      ></a>
+                  <div class="flex flex-wrap -mx-4">
+                    <div class="px-4 md:w-full w-full">
+                      <label class="fo-input">
+                        <div>Ad ve Soyad</div>
+                        <input type="text" placeholder="Lütfen ad ve soyadınızı giriniz." />
+                      </label>
+                      <label class="fo-input">
+                        <div>Telefon Numarası</div>
+                        <input type="tel" placeholder="Lütfen telefon numaranızı giriniz." />
+                      </label>
+                      <label class="fo-input">
+                        <div>Mesajınız</div>
+                        <textarea rows="5" placeholder="Lütfen mesajınızı giriniz."></textarea>
+                      </label>
+                      <button type="submit" class="fo-button">
+                        GONDER <i class="ph-arrow-right-bold text-base"></i>
+                      </button>
                     </div>
                   </div>
                 </div>
-              </section>
-              <section class="blog">
-                <h3 class="section-title">
-                  Son Yazılarım
-                  <span data-number="03" class="divider"></span>
-                </h3>
-
-                <div class="flex flex-wrap -mx-4 mb-7">
-                  <div class="md:w-6/12 w-full px-4 mb-4">
-                    <div class="blog-item">
-                      <a href="blog-detail.html" class="thumbnail">
-                        <img
-                          src="https://elanta.app/nazar/trueman-demo/light/img/blog/b1.jpg"
-                        />
-                      </a>
-                      <div class="card-style h-full">
-                        <div class="category">Next.js</div>
-                        <h4>
-                          <a href="blog-detail.html"
-                            >Create your own beauty blog with Trueman</a
-                          >
-                        </h4>
-                        <div class="divider mb-4"></div>
-                        <ul class="card-data">
-                          <li>14 Ağustos</li>
-                          <li>Furkan Ö.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="projects">
-                <h3 class="section-title">
-                  Projelerim
-                  <span data-number="04" class="divider"></span>
-                </h3>
-
-                <div class="flex flex-wrap -mx-4 mb-7">
-                  <div class="md:w-6/12 w-full px-4 mb-4">
-                    <div class="project-item">
-                      <a href="blog-detail.html" class="thumbnail">
-                        <img
-                          src="https://elanta.app/nazar/trueman-demo/light/img/portfolio/3.gif"
-                        />
-                      </a>
-                      <div class="info">
-                        <div>
-                          <h4 class="title">Project 1</h4>
-                        </div>
-                        <div>
-                          <a href="blog-detail.html" class="fo-button-rounded">
-                            <i class="ph-magnifying-glass-plus-bold"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section>
-                <div class="divider mb-7"></div>
               </section>
               <footer>
                 <div class="card-style">
