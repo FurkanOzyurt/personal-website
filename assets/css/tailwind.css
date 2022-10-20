@@ -90,7 +90,10 @@ header .header-menu{
     @apply w-full h-full flex-col lg:justify-center justify-between py-5 z-10 
   }
   header .menu{
-    @apply flex flex-col justify-center items-center w-screen h-screen absolute top-0 left-0 bg-light-bg transform translate-x-full transition-transform duration-300
+    @apply flex flex-col justify-center items-center w-screen h-screen absolute top-0 left-0 bg-light-bg transform -translate-x-full transition-transform duration-300
+  }
+  header.active .menu{
+    @apply translate-x-0
   }
 }
 
@@ -99,14 +102,14 @@ section.banner {
   @apply relative lg:h-[500px] h-[50vh] flex items-center;
 }
 section.banner.breadcrumbs {
-  @apply lg:h-[300px] h-auto relative mdx:pb-24 mdx:pt-28
+  @apply lg:h-[300px] h-auto relative lgx:pb-24 lgx:pt-28
 }
 section.banner.breadcrumbs::after {
   @apply h-full w-full bg-black content-[''] absolute top-0 left-0 opacity-20 rounded-b-[20px]
 }
 
 section.banner .overlay-bg {
-  @apply w-full h-full object-cover object-top absolute rounded-b-[20px];
+  @apply w-full h-full object-cover object-top absolute rounded-b-[20px] top-0 left-0;
 }
 
 section.banner .label {

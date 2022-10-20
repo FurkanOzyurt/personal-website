@@ -29,13 +29,21 @@
       <header class="section-space">
         <div class="fo-container flex items-center justify-between">
           <a href="index.html" class="name-title">Furkan<span>Ozyurt</span></a>
-          <div class="header-menu"><i class="ph-list-bold text-xl"></i></div>
+          <div class="header-menu">
+            <button type="button" class="open-menu">
+              <i class="ph-list-bold text-xl"></i>
+            </button>
+          </div>
           <div class="menu">
             <nav class="navigation-container">
               <div class="w-full lg:hidden flex justify-between fo-container">
-                <a href="index.html" class="name-title p-2">Furkan<span>Ozyurt</span></a>
+                <a href="index.html" class="name-title p-2"
+                  >Furkan<span>Ozyurt</span></a
+                >
                 <div class="lg:hidden flex p-2">
-                  <i class="ph-x-bold text-[25px]"></i>
+                  <button type="button" class="close-menu">
+                    <i class="ph-x-bold text-[25px]"></i>
+                  </button>
                 </div>
               </div>
               <div class="lg:flex lg:items-center">
@@ -153,15 +161,24 @@
                     <div class="px-4 md:w-full w-full">
                       <label class="fo-input">
                         <div>Ad ve Soyad</div>
-                        <input type="text" placeholder="Lütfen ad ve soyadınızı giriniz." />
+                        <input
+                          type="text"
+                          placeholder="Lütfen ad ve soyadınızı giriniz."
+                        />
                       </label>
                       <label class="fo-input">
                         <div>Telefon Numarası</div>
-                        <input type="tel" placeholder="Lütfen telefon numaranızı giriniz." />
+                        <input
+                          type="tel"
+                          placeholder="Lütfen telefon numaranızı giriniz."
+                        />
                       </label>
                       <label class="fo-input">
                         <div>Mesajınız</div>
-                        <textarea rows="5" placeholder="Lütfen mesajınızı giriniz."></textarea>
+                        <textarea
+                          rows="5"
+                          placeholder="Lütfen mesajınızı giriniz."
+                        ></textarea>
                       </label>
                       <button type="submit" class="fo-button">
                         GONDER <i class="ph-arrow-right-bold text-base"></i>
